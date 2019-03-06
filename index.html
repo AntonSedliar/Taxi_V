@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="vievport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" charset="utf-8"> <!--Кодировка сайта-->
+	<meta name="keywords" content="test, site, website"> <!--Ключевые слова для сайта-->
+	<meta name="description" content="Этот сайт является пробным сайтом "> <!--Описание сайта -->
+	<link href="style.css" rel="stylesheet" type="text/css" href="text/css"><!-- Подключение стилей -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo_atom.ico"> <!--Подключение иконкм сайта -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<title>Sedlyar Anton</title> <!--Заголовок сайта-->
+	<?php 
+	require_once "taxi/taxi.php";
+	$news = getNews();
+	?>
+</head>
+<body>
+	<div id="page-wrap">
+	<header>
+		<a href="index.html" title="На главную" id="logo"> Sedlyar Anton </a> <span id="contact">  <a href="about.html" title="Информация о нас">Жизненная позиция</a></span>
+		<span id="contact">  <a href="feedback.html" title="Обратная связь">Обратная связь</a></span>
+		<input type="search" class="field" placeholder="Давай помогу найти">
+		<span class="right"><span id="contact">  <a href="reg.html" title="Зарегитрироваться">Регистрация</a></span><span id="contact">  <a href="auth.html" title="Войти">Вход</a></span></span>
+	
+	</header>
+	
+			<?php
+			for($i = 0;$i <count($news);$i++){
+			if($i == 0)
+				echo "<div class="clear">
+		<div id="mane_soc_block">
+			<center>
+			<div id="mane_soc_block_in">
+				<h3>Регистрируйтесь на сайте</h3>
+				<a href="reg.html" title="Посмотреть статью">Регистрация</a>
+			</div>	"
+		}
+			?>
+			
+		<div class="clear">
+		<div id="mane_soc_block">
+			<center>
+			<div id="mane_soc_block_in">
+				<h3>Регистрируйтесь на сайте</h3>
+				<a href="reg.html" title="Посмотреть статью">Регистрация</a>
+			</div>	
+			</center>
+		</div>
+	    </div>
+		
+	</div>
+	</div>
+	<footer>
+		<span class="left">Все прова защищены &copy;2018</span>
+		<span class="right">Сциальные сети <img src="images/VK.ico" /> </span>
+		
+	</footer>
+
+</body>
+</html>
